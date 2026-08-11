@@ -1,0 +1,8 @@
+obbar/config.h
+oblist/config.h
+obbar/obbar
+obbar/*.o
+oblist/oblist
+oblist/*.o
+DESIGN.md
+.claude/
