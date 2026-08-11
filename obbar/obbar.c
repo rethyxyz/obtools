@@ -1,5 +1,4 @@
 /* obbar - suckless-style status/task bar for openbox
- * see DESIGN.md at the repo root for the full design and change history.
  *
  * A dockable bar window (EWMH strut + PPosition/PSize, pinned to the
  * primary monitor via RandR) with a few independently-updating parts:
@@ -19,8 +18,7 @@
  * off-screen Pixmap blitted on with a single XCopyArea per frame, to
  * avoid visible flicker.
  *
- * oblist (the standalone scriptable popup list) is milestone 5, not yet
- * built - see DESIGN.md.
+ * oblist (the standalone scriptable popup list) is not yet built.
  */
 #define _GNU_SOURCE /* signalfd/timerfd + sigaction/strdup/setenv under -std=c99 */
 
@@ -116,7 +114,7 @@ static int ntaskgroups = 0;
 
 /* left-to-right group order the user has dragged into place, keyed by
  * class name since that's what's stable across taskgroups[] rebuilds -
- * session-only by design, nothing here ever touches disk (see DESIGN.md). */
+ * session-only by design, nothing here ever touches disk. */
 static char grouporder[MAXGROUPORDER][128];
 static int ngrouporder = 0;
 
@@ -703,7 +701,7 @@ freetaskgroups(void)
 
 /* truncate title into dst so it fits maxw px, appending "...". Not
  * UTF-8-boundary aware - fine for ascii titles, may clip a multi-byte
- * character on others (documented limitation, see DESIGN.md milestone 6). */
+ * character on others (a known limitation). */
 static void
 fittext(const char *src, char *dst, size_t dstsz, int maxw)
 {
