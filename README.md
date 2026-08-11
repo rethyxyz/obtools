@@ -2,8 +2,7 @@
 
 A suckless-style (dwm/st philosophy) taskbar + status bar for Openbox.
 Plain Xlib + Xft + Imlib2, `config.h`-driven, no window manager library,
-no runtime deps beyond those. See [DESIGN.md](DESIGN.md) for the full
-design and milestone breakdown.
+no runtime deps beyond those.
 
 ## Components
 
@@ -34,8 +33,8 @@ white-on-black Sans scheme, runs the status block engine (each entry in
 realtime signal, `pkill -RTMIN+N obbar`, or on click via `$BUTTON`), and
 shows a live taskbar on the left (one button per window from
 `_NET_CLIENT_LIST`, with an icon, left-click to activate, middle-click to
-close). No multi-monitor awareness yet - see DESIGN.md milestone 4.
-`oblist` is not implemented yet. See DESIGN.md for what's next.
+close). No multi-monitor awareness yet.
+`oblist` is not implemented yet.
 
 ## Autostart with Openbox
 
