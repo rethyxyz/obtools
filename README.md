@@ -1,4 +1,4 @@
-# openbox_taskbar
+# obtools
 
 A suckless-style (dwm/st philosophy) taskbar + status bar for Openbox.
 Plain Xlib + Xft + Imlib2, `config.h`-driven, no window manager library,
